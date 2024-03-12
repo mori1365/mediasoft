@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 8%;
+}
+.logo{
+    width: 60px;
+}
+.logo img{
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.logo img:hover{
+    scale: .9;
+    cursor: pointer;
+}
