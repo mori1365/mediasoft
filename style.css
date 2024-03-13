@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #ecf0f1;
+}
 
 .header {
     display: flex;
@@ -39,6 +42,8 @@
         height:50px;
         align-items: center;
         line-height: 50px;
+        border-radius: 8px;
+        padding:0 10px;
 }
 
 .navbar a:is(:link, :active, :visited) {
@@ -63,12 +68,18 @@
     border: 1px solid rgba(66, 59, 59, 0.66);
 }
 
-.navbar a:hover {
-    /* From https://css.glass */
-    background: rgba(66, 59, 59, 0.27);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2.7px);
-    -webkit-backdrop-filter: blur(2.7px);
-    border: 1px solid rgba(66, 59, 59, 0.66);
+.brands-list{
+    overflow: hidden;
+}
+.wrapper{
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+.wrapper img{
+    width: 400px;
+}
+@keyframes scroll{
+    to{
+        translate: calc(-5 * 20rem);
+    }
 }
