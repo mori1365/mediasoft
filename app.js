@@ -1,29 +1,61 @@
-const activePage = window. location. pathname;
-const navLinks = document. querySelectorAll('.navbar a').
-forEach(link => {
-    if(link.href.includes(`${activePage}`)){
-        link.classList.add('active');
-    }
+const header = document.querySelector(".header");
+window.addEventListener("scroll", function () {
+    header.classList.toggle("sticky", this.scrollY > 140)
 })
 
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll('.navbar a').
+    forEach(link => {
+        if (link.href.includes(`${activePage}`)) {
+            link.classList.add('active');
+        }
+    })
 
+const myslide = document.querySelectorAll(".myslide"),
+    dot = document.querySelectorAll(".dot");
 
-let images = document.querySelectorAll('.slide img');
-let slideshowContainer = document.querySelector('.slideshow-container');
+let counter = 1;
+slidefun(counter);
+let timer = setInterval(autoslide, 8000);
 
-function moveSlide() {
-  // انتقال اولین تصویر به انتهای آرایه
-  slideshowContainer.appendChild(images[0]);
-  images = document.querySelectorAll('.slide img'); // به‌روزرسانی آرایه تصاویر
-
-  // انجام انتقال بصری
-  slideshowContainer.style.transition = 'none';
-  slideshowContainer.style.transform = 'translateX(0)';
-  setTimeout(() => {
-    slideshowContainer.style.transition = 'transform 2s ease';
-    slideshowContainer.style.transform = 'translateX(-33.33%)';
-  }, 100); // اندکی تاخیر برای اعمال تغییر بدون انتقال
+function autoslide() {
+    counter += 1;
+    slidefun(counter);
 }
 
-// تنظیم تایمر برای حرکت دادن تصاویر هر 3 ثانیه
-setInterval(moveSlide, 3000);
+function plusSlides(n) {
+    counter += n;
+    slidefun(counter);
+    resettime();
+}
+
+function currentSlide(n) {
+    counter = n;
+    slidefun(counter);
+    resettime();
+}
+
+function resettime() {
+    clearInterval(timer);
+    timer = setInterval(autoslide, 8000);
+}
+
+      function slidefun(n) {
+
+    let i;
+    for (i = 0; i < myslide.length; i++) {
+        myslide[i].style.display = "none";
+    }
+    for (i = 0; i < dot.length; i++) {
+        dot[i].className = dot[i].className.replace(' active', '');
+    }
+    if (n > myslide.length) {
+        counter = 1;
+    }
+    if (n < 1) {
+        counter = myslide.length;
+    }
+    myslide[counter - 1].style.display = "block";
+    dot[counter - 1].className += " active";
+}
+

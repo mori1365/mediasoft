@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>media soft</title>
+    <title>وبسایت خبری آماری مدیا اسپورت</title>
     <link rel="icon" href="./icon/mediasoft.png">
     <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -15,11 +16,61 @@
             <img src="./icon/mediasoft.png" alt="">
         </div>
         <div class="navbar">
-            <a href="./index.html">خانه</a>
-            <a href="./master.html">مسترلیگ</a>
-            <a href="./gallery.html">گالری</a>
-            <a href="./news.html">خبر</a>
-            <a href="./about.html">تماس با ما</a>
+            <a href="#"><i class="ri-home-4-fill"></i> خانه</a>
+            <a href="#"><i class="ri-flag-2-fill"></i> بنر</a>
+            <a href="#"><i class="ri-map-fill"></i> محتوا</a>
+            <a href="#"><i class="ri-football-fill"></i> مسترلیگ</a>
+            <a href="#"><i class="ri-slideshow-3-fill"></i> گالری</a>
+            <a href="#"><i class="ri-id-card-fill"></i> بازیکنان</a>
+            <a href="#"><i class="ri-customer-service-2-fill"></i> تماس با ما </a>
+        </div>
+        <div id="menu"><i class="ri-menu-line"></i></div>
+    </div>
+    <div class="slider">
+        <div class="myslide fade">
+            <div class="text">
+                <h1>مسترلیگ</h1>
+                <p>رقابتهای باشگاهی اسپانیا لالیگا</p>
+            </div>
+            <img src="./image/27.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="myslide fade">
+            <div class="text">
+                <h1>جام جهانی</h1>
+                <p>رقابت های جام جهانی باحضور32 تیم</p>
+            </div>
+            <img src="./image/25.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="myslide fade">
+            <div class="text">
+                <h1>باشگاهی جهان</h1>
+                <p>رقابتهای باشگاههای جهان با حضور قهرمان قاره ها</p>
+            </div>
+            <img src="./image/31.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="myslide fade">
+            <div class="text">
+                <h1>چمپیونزلیگ</h1>
+                <p>رقابت های لیگ قهرمانان اروپا با حضور 32تیم</p>
+            </div>
+            <img src="./image/39.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="myslide fade">
+            <div class="text">
+                <h1>سوپر کاپ</h1>
+                <p>رقابت سوپر کاپ اروپا بین قهرمان چمپیونز لیگ و یورولیگ</p>
+            </div>
+            <img src="./image/59.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="prev" onclick="plusSlides(-1)"><i class="ri-arrow-left-circle-fill"></i></div>
+        <div class="next" onclick="plusSlides(1)"><i class="ri-arrow-right-circle-fill"></i></div>
+
+        <div class="dotsbox" style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)">1</span>
+            <span class="dot" onclick="currentSlide(2)">2</span>
+            <span class="dot" onclick="currentSlide(3)">3</span>
+            <span class="dot" onclick="currentSlide(4)">4</span>
+            <span class="dot" onclick="currentSlide(5)">5</span>
         </div>
     </div>
     <script src="./app.js"></script>
