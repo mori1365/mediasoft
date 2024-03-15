@@ -1,14 +1,14 @@
 
 let menu = document.getElementById('menu');
 let navbar = document.querySelector(".navbar");
-menu.addEventListener('click', function() {
-    if(navbar.style.left==="100%"){
+menu.addEventListener('click', function () {
+    if (navbar.style.left === "100%") {
         navbar.style.left = 0;
-    }else{
+    } else {
         navbar.style.left = "100%";
     }
 })
-window.onscroll = () =>{
+window.onscroll = () => {
     navbar.style.left = "100%";
 }
 
@@ -54,7 +54,7 @@ function resettime() {
     timer = setInterval(autoslide, 8000);
 }
 
-      function slidefun(n) {
+function slidefun(n) {
 
     let i;
     for (i = 0; i < myslide.length; i++) {
@@ -73,3 +73,14 @@ function resettime() {
     dot[counter - 1].className += " active";
 }
 
+
+let fullbox = document.querySelector(".fullscreen");
+let closes = document.querySelector(".closed");
+let iframe = document.querySelector("iframe");
+function fullscren(url) {
+    fullbox.style.left = 0;
+    iframe.src = url;
+}
+closes.onclick = () => {
+    fullbox.style.left = "100%";
+}
