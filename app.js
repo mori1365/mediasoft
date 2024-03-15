@@ -77,7 +77,7 @@ function slidefun(n) {
 let fullbox = document.querySelector(".fullscreen");
 let closes = document.querySelector(".closed");
 let iframe = document.querySelector("iframe");
-function fullscren(url) {
+function openbox(url) {
     fullbox.style.left = 0;
     iframe.src = url;
 }
