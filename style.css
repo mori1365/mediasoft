@@ -511,6 +511,15 @@ border: 1px solid rgba(184, 12, 12, 0.3);
         -webkit-backdrop-filter: blur(8.2px);
         border: 1px solid rgba(165, 114, 146, 0.37);
     }
+    .master{
+        margin-top: 700px;
+    }
+    marquee h1{
+        font-size: 2rem;
+    }
+    .iframe{
+        margin: 0 auto;
+    }
 }
 
 @media (max-width:600px) {
