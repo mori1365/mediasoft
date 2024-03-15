@@ -74,13 +74,11 @@ function slidefun(n) {
 }
 
 
-let fullbox = document.querySelector(".fullscreen");
-let closes = document.querySelector(".closed");
-let iframe = document.querySelector("iframe");
-function openbox(url) {
-    fullbox.style.left = 0;
-    iframe.src = url;
+function openpage(pageUrl){
+    document.getElementById("myFrame").src = pageUrl;
+    document.getElementById("myModal").style.left = 0;
 }
-closes.onclick = () => {
-    fullbox.style.left = "100%";
+let closed = document.querySelector(".closed");
+closed.onclick = () => {
+    document.getElementById("myModal").style.left = "100%";
 }
