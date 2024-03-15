@@ -453,4 +453,7 @@
     .slid{
         height: 300px;
     }
+    .box:nth-child(3){
+        height: 510px;
+    }
 }
